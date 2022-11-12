@@ -12,5 +12,9 @@
   },
   "volta": {
     "node": "16.18.1"
+  },
+  "dependencies": {
+    "sass": "^1.56.1",
+    "vuetify": "^3.0.1"
   }
 }
