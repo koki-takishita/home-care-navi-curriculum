@@ -9,8 +9,10 @@
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.13",
+    "sass": "^1.56.1",
     "vite-plugin-vuetify": "^1.0.0",
-    "vuetify": "^3.0.1"
+    "vuetify": "^3.0.1",
+    "webpack-plugin-vuetify": "^2.0.0"
   },
   "volta": {
     "node": "16.18.1"

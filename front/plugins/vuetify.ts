@@ -1,10 +1,11 @@
+import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/lib/iconsets/mdi'
 
 // materialdesign iconのfont これないとiconが表示されない
 import '@mdi/font/css/materialdesignicons.css'
+// SCSS Custom Variable
+// import 'assets/main.scss'
 
 export default defineNuxtPlugin(nuxtApp => {
   const vuetify = createVuetify({
@@ -15,10 +16,7 @@ export default defineNuxtPlugin(nuxtApp => {
         mdi,
       }
     },
-    components,
-    directives,
   })
 
   nuxtApp.vueApp.use(vuetify)
 })
-
