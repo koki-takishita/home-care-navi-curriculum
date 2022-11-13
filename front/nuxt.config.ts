@@ -1,19 +1,14 @@
-// いらない？ https://www.the-koi.com/projects/how-to-set-up-a-project-with-nuxt3-and-vuetify3-with-a-quick-overview/
-import vuetify from 'vite-plugin-vuetify'
-
+import { defineNuxtConfig } from 'nuxt/config'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: true,
   css: ['vuetify/styles'],
+  build: {
+    transpile: ["vuetify"],
+  },
   vite: {
-    ssr: {
-      noExternal: ['vuetify'],
+    define: {
+      "process.env.DEBUG": false,
     },
   },
-  modules: [
-    async (option, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', config => config.plugins.push(
-        vuetify()
-      ))
-    }
-  ]
-})
+});

@@ -4,17 +4,17 @@ definePageMeta({
   layout: "customer",
 });
 */
+/*
 definePageMeta({
   layout: false,
+});
+*/
+definePageMeta({
+  layout: "customer",
 });
 </script>
 
 <template>
-  <div>
-    <NuxtLayout name="customer">
-      Page: Home Page
-    </NuxtLayout>
-  </div>
 </template>
 
 <style scoped></style>
