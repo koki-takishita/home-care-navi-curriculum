@@ -58,7 +58,6 @@
       </div>
     </v-list>
   </v-navigation-drawer>
-  <v-app-bar location="bottom" color="grey-lighten-2"></v-app-bar>
 </template>
 <script lang="ts" setup>
   const drawer = ref(false)
