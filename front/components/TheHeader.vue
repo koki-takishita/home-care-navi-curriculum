@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevation="1" class="px-2">
+  <v-app-bar elevation="2" class="px-2">
     <v-container class="d-flex align-center">
       <img
         class="mr-auto"

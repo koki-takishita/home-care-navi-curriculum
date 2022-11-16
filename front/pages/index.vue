@@ -13,8 +13,9 @@ definePageMeta({
   layout: "customer",
 });
 </script>
-
 <template>
+  <p>test</p>
 </template>
+<style scoped>
 
-<style scoped></style>
+</style>
