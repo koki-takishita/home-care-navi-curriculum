@@ -1,6 +1,6 @@
 <template>
-  <v-app-bar elevation="2" class="px-2">
-    <v-container class="d-flex align-center">
+  <v-app-bar elevation="2">
+    <v-container class="d-flex align-center px-2">
       <img
         class="mr-auto"
         src="/img/drawer_icon.svg"

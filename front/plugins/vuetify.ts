@@ -16,6 +16,12 @@ export default defineNuxtPlugin(nuxtApp => {
         mdi,
       }
     },
+    display: {
+      mobileBreakpoint: 'xs',
+      thresholds: {
+        xs: 599,
+      },
+    },
   })
 
   nuxtApp.vueApp.use(vuetify)
