@@ -3,7 +3,7 @@
     <v-container class="d-flex align-center px-2">
       <img
         class="mr-auto"
-        src="/img/drawer_icon.svg"
+        src="/img/top.svg"
         alt="Drawer Icon"
         height="28" />
       <v-app-bar-nav-icon v-if="mobile" color="#AEB5B2" @click.stop="drawer = !drawer" />
@@ -46,7 +46,7 @@
       color="#F5F7F7"
       >
       <v-img
-        src="/img/drawer_icon.svg"
+        src="/img/top.svg"
         alt="Drawer Icon"
         height=28 />
       <p class="py-3 mb-0 text-caption text-grey-darken-2 font-weight-bold">ゲストさん</p>
@@ -84,7 +84,7 @@
 </template>
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
-  let { mobile } = useDisplay()
+  const { mobile } = useDisplay()
   const drawer = ref(false)
   const items = ([
     { id: 1, text: "閲覧履歴", icon: "mdi-chevron-right" },

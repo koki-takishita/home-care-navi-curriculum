@@ -1,12 +1,12 @@
 <template>
   <v-layout>
-    <v-main>
-      <v-container class="wrapper" order=-2>
-        <TheHeader />
-        <slot />
-        <TheFooter />
-      </v-container>
-    </v-main>
+    <TheHeader />
+      <v-main>
+        <v-container class="wrapper" order=-2>
+          <slot />
+        </v-container>
+      </v-main>
+    <TheFooter />
   </v-layout>
 </template>
 <style>

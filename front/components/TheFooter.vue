@@ -18,12 +18,12 @@
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
 
-  let { xs } = useDisplay()
+  const { mobile } = useDisplay()
   const toggleClassWrapperLayout = () => {
-    return xs.value ? "flex-column-reverse" : "justify-space-between"
+    return mobile.value ? "flex-column-reverse" : "justify-space-between"
   }
   const toggleClassFooterLinks = () => {
-    return xs.value ? "justify-space-around" : "justify-space-between"
+    return mobile.value ? "justify-space-around" : "justify-space-between"
   }
 </script>
 <style scoped>
