@@ -9,7 +9,7 @@
 </template>
 <style>
 main {
-	background: #F5F7F7;
-	height: 100vh;
+  background: #F5F7F7;
+  height: 100vh;
 }
 </style>
