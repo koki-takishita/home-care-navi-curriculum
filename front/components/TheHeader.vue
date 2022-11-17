@@ -1,12 +1,35 @@
 <template>
-  <v-app-bar elevation="1" class="px-2">
-    <v-container class="d-flex align-center">
+  <v-app-bar elevation="2">
+    <v-container class="d-flex align-center px-2">
       <img
         class="mr-auto"
-        src="/img/drawer_icon.svg"
+        src="/img/top.svg"
         alt="Drawer Icon"
         height="28" />
-      <v-app-bar-nav-icon color="#AEB5B2" @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon v-if="mobile" color="#AEB5B2" @click.stop="drawer = !drawer" />
+      <div v-else class="d-flex justify-space-between header-link-items">
+        <div class="d-flex justify-space-between text-grey-darken-2 header-link-wrapper">
+          <p class="align-self-center text-caption">閲覧履歴</p>
+          <p class="align-self-center text-caption">ブックマーク</p>
+          <p class="align-self-center text-caption">予約履歴</p>
+        </div>
+        <div class="d-flex justify-space-between header-btn py-3">
+          <v-btn
+            variant="flat"
+            class="bg-white text-grey-darken-2 font-weight-bold"
+            width="120"
+            height="40"
+            border
+          >ログイン</v-btn>
+          <v-btn
+            variant="flat"
+            color="#F06364"
+            class="text-white font-weight-bold"
+            width="120"
+            height="40"
+          >新規登録</v-btn>
+        </div>
+      </div>
     </v-container>
   </v-app-bar>
 
@@ -23,7 +46,7 @@
       color="#F5F7F7"
       >
       <v-img
-        src="/img/drawer_icon.svg"
+        src="/img/top.svg"
         alt="Drawer Icon"
         height=28 />
       <p class="py-3 mb-0 text-caption text-grey-darken-2 font-weight-bold">ゲストさん</p>
@@ -58,9 +81,10 @@
       </div>
     </v-list>
   </v-navigation-drawer>
-  <v-app-bar location="bottom" color="grey-lighten-2"></v-app-bar>
 </template>
 <script lang="ts" setup>
+  import { useDisplay } from 'vuetify'
+  const { mobile } = useDisplay()
   const drawer = ref(false)
   const items = ([
     { id: 1, text: "閲覧履歴", icon: "mdi-chevron-right" },
@@ -68,3 +92,14 @@
     { id: 1, text: "予約状況", icon: "mdi-chevron-right" }
   ])
 </script>
+<style>
+.header-link-wrapper {
+  width: 220px;
+}
+.header-btn {
+  width: 248px;
+}
+.header-link-items {
+  width: 500px;
+}
+</style>
