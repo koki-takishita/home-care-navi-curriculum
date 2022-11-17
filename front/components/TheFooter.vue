@@ -6,7 +6,7 @@
           <p class="text-button font-weight-black">ホームケアナビ</p>
           <p class="copy-right">&copy;hogehoge</p>
         </div>
-        <div class="d-flex fotter-link-wrapper justify-space-between" :class="toggleClassFooterLinks()">
+        <div class="d-flex fotter-link-wrapper" :class="toggleClassFooterLinks()">
           <p class="mb-0 fotter-link text-red-lighten-2">プライバシーポリシー</p>
           <p class="mb-0 fotter-link text-red-lighten-2">利用規約</p>
           <p class="mb-0 fotter-link text-red-lighten-2">お問い合わせ</p>
@@ -18,12 +18,12 @@
 <script lang="ts" setup>
   import { useDisplay } from 'vuetify'
 
-  let { mobile } = useDisplay()
+  let { xs } = useDisplay()
   const toggleClassWrapperLayout = () => {
-    return mobile.value ? "flex-column-reverse" : "justify-space-between"
+    return xs.value ? "flex-column-reverse" : "justify-space-between"
   }
   const toggleClassFooterLinks = () => {
-    return mobile.value ? "justify-space-around" : "justify-space-between"
+    return xs.value ? "justify-space-around" : "justify-space-between"
   }
 </script>
 <style scoped>
@@ -42,7 +42,7 @@
   align-items: center;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 719px) {
   .fotter-link-wrapper {
     width: 100%;
   }
